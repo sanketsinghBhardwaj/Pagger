@@ -1,0 +1,17 @@
+{
+    "compilerOptions": {
+      "baseUrl": ".",
+      "paths": {
+        "_assets": ["src/assets/*"],
+        "_images": ["src/assets/images/*"],
+        "_components": ["src/components/*"],
+        "_navigations": ["app/navigations/*"],
+        "_screens": ["src/screens/*"],
+        "_services": ["src/services/*"],
+        "_styles": ["src/styles/*"],
+        "_config": ["src/config/*"],
+        "_utils": ["src/utils/*"]
+      }
+    }
+  }
+  
