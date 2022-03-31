@@ -1,5 +1,5 @@
 import React from 'react';
-import {StyleSheet, Image} from 'react-native';
+import {StyleSheet, View} from 'react-native';
 import {Input} from 'react-native-elements';
 
 const INPUT_BOX_HEIGHT = 50
@@ -11,8 +11,10 @@ const InputBox =(props)=>{
         inputStyle,
         maxLines,
         placeHolderTextColor,
+        mainBox,
       } = props;
       return (
+        <View styles={[styles.maincontainer, {...mainBox}]}>
         <Input
           {...props}
           multiline={maxLines > 1}
@@ -23,11 +25,16 @@ const InputBox =(props)=>{
           inputStyle={[styles.input, inputStyle]}
           inputContainerStyle={styles.inputContainerStyle}
         />
+        </View>
       );
 
 }
 const styles = StyleSheet.create({
-    box: {
+  maincontainer:{
+
+  },
+  
+  box: {
       paddingLeft: 20,
       height: INPUT_BOX_HEIGHT,
       backgroundColor: 'white',

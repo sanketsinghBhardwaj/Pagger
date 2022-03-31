@@ -3,7 +3,8 @@ import { createStackNavigator } from '@react-navigation/stack';
 
 import {
  Login,
- OtpScreen
+ OtpScreen,
+ Signup,
 } from '_screens';
 
 const UserStack = createStackNavigator();
@@ -25,6 +26,8 @@ function UserFlow() {
      
      <UserStack.Screen name="Login" component={Login} />
      <UserStack.Screen name="OtpScreen" component={OtpScreen}  />
+     <UserStack.Screen name='Signup' component={Signup} />
+     
     </UserStack.Navigator>
   );
 }

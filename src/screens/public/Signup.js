@@ -9,10 +9,10 @@ import {
     Button,
 } from 'react-native';
 const { height, width } = Dimensions.get('window')
-import { InputBox , ButtonIcon } from '_components';
+import { InputBox , ButtonIcon,TextBox } from '_components';
 import {useNavigation} from '@react-navigation/native'
 
-const Login = () => {
+const Signup = () => {
    const navigation = useNavigation();
 
     
@@ -21,19 +21,41 @@ const Login = () => {
             <ImageBackground style={styles.imagecontainer}>
                 <View style={styles.mainContainer}>
                 <View style={styles.parentcontainer}>
-                    <Text style={styles.titletext}>Log in</Text>
+                    <Text style={styles.titletext}>Register</Text>
+                    <View style={{minHeight:'20%',justifyContent:'space-between', width:'100%', alignItems:'center'}}>
                 <InputBox
-                placeHolder='Mobile'
+                placeHolder='Fullname'
+                boxStyle={styles.inputBoxstyle}
+                inputStyle={{height:50,textAlignVertical : 'center' ,}}
+                mainBox={{bottom:10}}
+                />
+                 <InputBox
+                placeHolder='Username'
                 boxStyle={styles.inputBoxstyle}
                 inputStyle={{height:50,textAlignVertical : 'center'}}
+                mainBox={{bottom:10}}
+
                 />
+                 <InputBox
+                placeHolder='Email id (optional)'
+                boxStyle={styles.inputBoxstyle}
+                inputStyle={{height:50,textAlignVertical : 'center'}}
+                mainBox={{bottom:10}}
+
+                />
+                </View>
+                <TextBox 
+                 placeHolder='Type here'
+                 textboxstyle={{  minHeight:100 , padding:10}}
+                 mainBox={{marginTop:15 , width:'90%' , top:50 }}
+                 />
                 <ButtonIcon
-                title="Login"
+                title="Next"
                 onPress={()=> navigation.navigate('OtpScreen')}
                 />
                 <View style={{flexDirection:'row',position:'absolute', bottom:100  , alignItems:'center'}}>
-                  <Text style={{fontSize:18}}>Dont have an account?</Text>
-                  <Button style={{fontSize:10}} title='Register Now' onPress={()=> navigation.navigate('Signup')}/>
+                  <Text style={{fontSize:18}}>Already have an account?</Text>
+                  <Button style={{fontSize:10}} title='Login Now'/>
                   </View>
                 </View>
                 </View>
@@ -55,9 +77,10 @@ const styles = StyleSheet.create({
         height: height,
         width: width,
         flexDirection:'column-reverse',
+        
     },
     parentcontainer: {
-        height:350,
+        height:'75%',
          width:width,
           backgroundColor:'white',
           alignItems:'center',
@@ -74,7 +97,10 @@ const styles = StyleSheet.create({
         height:50,
         backgroundColor:'lightgray',
          borderRadius:10,
-         alignItems:'center'
+         alignItems:'center',
+    },
+    mainBoxContreoller:{
+        width:'90%'
     }
 });
-export default Login
+export default Signup
