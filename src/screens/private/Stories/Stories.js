@@ -15,31 +15,17 @@ import {ButtonIcon } from '_components';
 import { Colors, } from '_colours';
 import { imagePath } from '_assets'
 
-const PhotoUpload = () => {
+const Stories = () => {
 const navigation = useNavigation();
 
 
     return (
         <SafeAreaView>
-            <ImageBackground style={styles.imagecontainer}>
-                <View style={styles.mainContainer}>
-                    <View style={styles.parentcontainer}>
-                        <Text style={styles.titletext}>Upload Photo</Text>
-                        <View style={styles.imgContainer}>
-                            <TouchableOpacity>
-                                <Image
-                                    source={imagePath.cameraIcon}
-                                    style={styles.imgStyle}
-                                />
-                            </TouchableOpacity>
-                        </View>
-                        <ButtonIcon
-                            title="Register"
-                            onPress={()=> navigation.navigate('MyTabs')}
-                        />
-                    </View>
-                </View>
-            </ImageBackground>
+           <SafeAreaView>
+            <View style={{ alignItems:'center', justifyContent:'center'}}>
+                <Text>Stories</Text>
+            </View>
+        </SafeAreaView>
         </SafeAreaView>
     )
 }
@@ -83,4 +69,4 @@ const styles = StyleSheet.create({
         resizeMode: 'center'
     }
 });
-export default PhotoUpload
+export default Stories

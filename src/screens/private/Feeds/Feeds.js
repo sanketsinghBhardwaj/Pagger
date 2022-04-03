@@ -15,31 +15,15 @@ import {ButtonIcon } from '_components';
 import { Colors, } from '_colours';
 import { imagePath } from '_assets'
 
-const PhotoUpload = () => {
+const Feeds = () => {
 const navigation = useNavigation();
 
 
     return (
         <SafeAreaView>
-            <ImageBackground style={styles.imagecontainer}>
-                <View style={styles.mainContainer}>
-                    <View style={styles.parentcontainer}>
-                        <Text style={styles.titletext}>Upload Photo</Text>
-                        <View style={styles.imgContainer}>
-                            <TouchableOpacity>
-                                <Image
-                                    source={imagePath.cameraIcon}
-                                    style={styles.imgStyle}
-                                />
-                            </TouchableOpacity>
-                        </View>
-                        <ButtonIcon
-                            title="Register"
-                            onPress={()=> navigation.navigate('MyTabs')}
-                        />
-                    </View>
-                </View>
-            </ImageBackground>
+            <View style={{ alignItems:'center', justifyContent:'center'}}>
+                <Text>Feeds</Text>
+            </View>
         </SafeAreaView>
     )
 }
@@ -83,4 +67,4 @@ const styles = StyleSheet.create({
         resizeMode: 'center'
     }
 });
-export default PhotoUpload
+export default Feeds
