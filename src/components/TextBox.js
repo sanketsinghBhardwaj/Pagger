@@ -29,9 +29,10 @@ const TextBox =(props)=>{
 const styles = StyleSheet.create({
   maincontainer:{
   width:'100%',
+  marginTop:20,
   },
   testbox:{
-minHeight:120,
+minHeight:100,
 width:300,
 borderWidth:0.5,
 textAlign:'left'

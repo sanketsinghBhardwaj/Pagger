@@ -19,7 +19,7 @@
                     "_screens": "./src/screens",
                     "_services": "./src/services",
                     "_utils": "./src/utils",
-                    "_colour" : "./src/colours"
+                    "_colours": "./src/colours",
                 }
             }
         ]

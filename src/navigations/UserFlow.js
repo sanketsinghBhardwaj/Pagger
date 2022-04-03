@@ -5,6 +5,7 @@ import {
  Login,
  OtpScreen,
  Signup,
+ PhotoUpload,
 } from '_screens';
 
 const UserStack = createStackNavigator();
@@ -27,7 +28,7 @@ function UserFlow() {
      <UserStack.Screen name="Login" component={Login} />
      <UserStack.Screen name="OtpScreen" component={OtpScreen}  />
      <UserStack.Screen name='Signup' component={Signup} />
-     
+     <UserStack.Screen name="PhotoUpload" component={PhotoUpload} />
     </UserStack.Navigator>
   );
 }
