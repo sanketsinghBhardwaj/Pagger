@@ -14,7 +14,6 @@ const InputBox =(props)=>{
         mainBox,
       } = props;
       return (
-        <View styles={[styles.maincontainer, {...mainBox}]}>
         <Input
           {...props}
           multiline={maxLines > 1}
@@ -25,7 +24,6 @@ const InputBox =(props)=>{
           inputStyle={[styles.input, inputStyle]}
           inputContainerStyle={styles.inputContainerStyle}
         />
-        </View>
       );
 
 }
