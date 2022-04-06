@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, View, Text, Image, TouchableOpacity } from 'react-native';
+import { StyleSheet, View, Text, Image, TouchableOpacity,StatusBar,SafeAreaView } from 'react-native';
 import { imagePath } from '_assets'
 import {Colors} from '_colours'
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
@@ -13,7 +13,10 @@ const MainHeader = (props) => {
         mainBox,
     } = props;
     return (
+        <View>
+          
         <View style={styles.maincontainer}>
+          
             <View style={styles.subView1}>
                 <TouchableOpacity>
                     <Image style={styles.menuIcon} source={imagePath.menu} />
@@ -22,24 +25,33 @@ const MainHeader = (props) => {
             </View>
             <View style={styles.subView2}>
             <EvilIcons name='bell'
-            size={22}
+            size={30}
             color={'white'}
             />
-           
              <AntDesign
             name='search1'
             size={22}
             color={'white'}
+            style={{left:5,}}
             />  
               <FontAwesome size={22}
             name='rupee'
             color={'white'}
+            style={{left:15,}}
             />  
             </View>
+        </View>
         </View>
     );
 
 }
+const MyStatusBar = ({backgroundColor, ...props}) => (
+    <View style={[styles.statusBar, { backgroundColor }]}>
+      <SafeAreaView>
+        <StatusBar translucent backgroundColor={backgroundColor} {...props} />
+      </SafeAreaView>
+    </View>
+  );
 const styles = StyleSheet.create({
     maincontainer: {
         flexDirection: 'row',
