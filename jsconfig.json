@@ -5,12 +5,13 @@
         "_assets": ["src/assets/*"],
         "_images": ["src/assets/images/*"],
         "_components": ["src/components/*"],
-        "_navigations": ["app/navigations/*"],
+        "_navigations": ["src/navigations/*"],
         "_screens": ["src/screens/*"],
         "_services": ["src/services/*"],
         "_styles": ["src/styles/*"],
         "_config": ["src/config/*"],
-        "_utils": ["src/utils/*"]
+        "_utils": ["src/utils/*"],
+        "_colours": ["src/colours/*"],
       }
     }
   }

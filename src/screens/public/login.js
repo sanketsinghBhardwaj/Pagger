@@ -6,11 +6,12 @@ import {
     View,
     ImageBackground,
     Dimensions,
-
+    Button,
 } from 'react-native';
 const { height, width } = Dimensions.get('window')
 import { InputBox , ButtonIcon } from '_components';
-import {useNavigation} from '@react-navigation/native'
+import {useNavigation} from '@react-navigation/native';
+import {Colors} from '_colours'
 
 const Login = () => {
    const navigation = useNavigation();
@@ -31,6 +32,10 @@ const Login = () => {
                 title="Login"
                 onPress={()=> navigation.navigate('OtpScreen')}
                 />
+                <View style={{flexDirection:'row',position:'absolute', bottom:100  , alignItems:'center'}}>
+                  <Text style={{fontSize:18}}>Dont have an account?</Text>
+                  <Button style={{fontSize:10}} title='Register Now' onPress={()=> navigation.navigate('Signup')}/>
+                  </View>
                 </View>
                 </View>
             </ImageBackground>
@@ -56,10 +61,11 @@ const styles = StyleSheet.create({
         height:350,
          width:width,
           backgroundColor:'white',
-          alignItems:'center'
+          alignItems:'center',
+        
     },
     titletext: {
-        color:'purple',
+        color:Colors.TITLECOLOUR,
         fontSize:20,
          fontWeight:'700',
          padding:10

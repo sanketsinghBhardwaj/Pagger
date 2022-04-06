@@ -1,7 +1,7 @@
 import React from 'react';
 import {StyleSheet, Text , TouchableOpacity, View} from 'react-native';
 import AntDesign from 'react-native-vector-icons/AntDesign';
-
+import {Colors} from '_colours'
 const INPUT_BOX_HEIGHT = 50
 
 const ButtonIcon =(props)=>{
@@ -15,7 +15,7 @@ const ButtonIcon =(props)=>{
            <TouchableOpacity>
                <Text style={{color:'white', fontSize:18,fontWeight:'500'}}>{title}</Text>
            </TouchableOpacity>
-           <AntDesign size={24} color="gray" name="right" />
+           <AntDesign size={24} color="white" name="right" />
        </TouchableOpacity>
       );
 
@@ -29,7 +29,7 @@ const styles = StyleSheet.create({
       flexDirection:'row',
       width:'90%',
       justifyContent:'space-between',
-      backgroundColor:'blue',
+      backgroundColor:Colors.TITLECOLOUR,
       alignItems:'center',
       paddingRight:10,
       paddingLeft:20,

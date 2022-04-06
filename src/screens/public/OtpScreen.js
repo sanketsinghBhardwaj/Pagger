@@ -10,6 +10,7 @@ import {
 } from 'react-native';
 const { height, width } = Dimensions.get('window')
 import { InputBox , ButtonIcon } from '_components';
+import { Colors } from '_colours';
 const OtpScreen = () => {
    
 
@@ -56,7 +57,7 @@ const styles = StyleSheet.create({
           alignItems:'center'
     },
     titletext: {
-        color:'purple',
+        color:Colors.TITLECOLOUR,
         fontSize:20,
          fontWeight:'700',
          padding:10
