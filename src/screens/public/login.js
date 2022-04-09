@@ -11,7 +11,7 @@ import {
 const { height, width } = Dimensions.get('window')
 import { InputBox , ButtonIcon } from '_components';
 import {useNavigation} from '@react-navigation/native';
-import {Colors} from '_colours'
+import {Colors} from '_colours';
 
 const Login = () => {
    const navigation = useNavigation();

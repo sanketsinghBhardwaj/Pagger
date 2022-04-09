@@ -7,7 +7,7 @@ const imagePath = {
     home:require('./icons/home.png'),
     rupee:require('./icons/Rupee.png'),
     search:require('./icons/search.png'),
-    chat:require('./icons/chat.png')
-
+    chat:require('./icons/chat.png'),
+   
 }
 export default imagePath;

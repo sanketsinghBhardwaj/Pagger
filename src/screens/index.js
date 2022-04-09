@@ -6,3 +6,4 @@ export {default as Chats} from './private/Chats/Chats';
 export {default as Feeds} from './private/Feeds/Feeds';
 export {default as NewsFeeds} from './private/Newsfeeds/NewsFeeds';
 export {default as Stories} from './private/Stories/Stories';
+export {default as Drawer} from './private/Drawer/Drawer';

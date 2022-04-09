@@ -15,6 +15,7 @@ import {
   Text,
   useColorScheme,
   View,
+  LogBox
 } from 'react-native';
 import Routes from './routes'
 import {Login} from '_screens';
@@ -23,7 +24,7 @@ import WholeApp from '_navigations'
 
 
 const App =() => {
-  
+  LogBox.ignoreLogs(['Warning: ...']);
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: 'white' }} >
     <WholeApp />
