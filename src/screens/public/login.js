@@ -7,6 +7,7 @@ import {
     ImageBackground,
     Dimensions,
     Button,
+    StatusBar,
 } from 'react-native';
 const { height, width } = Dimensions.get('window')
 import { InputBox , ButtonIcon } from '_components';

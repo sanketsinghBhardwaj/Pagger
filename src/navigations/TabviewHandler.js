@@ -4,6 +4,7 @@ import { createMaterialTopTabNavigator } from '@react-navigation/material-top-ta
 import {Chats,Feeds,Stories,NewsFeeds} from '_screens';
 import {imagePath} from '_assets'
 import {MainHeader} from '_components';
+import {Colors} from '_colours'
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import Fontisto from 'react-native-vector-icons/Fontisto'
 const Tab = createMaterialTopTabNavigator();
@@ -11,7 +12,7 @@ const Tab = createMaterialTopTabNavigator();
 function MyTabs() {
   return (
 <>
-<StatusBar translucent barStyle="light-content" />
+<StatusBar translucent backgroundColor={Colors.HeaderColour} barStyle='dark-content'  />
     <MainHeader />
     <Tab.Navigator>
       <Tab.Screen name="Feeds" component={Feeds}

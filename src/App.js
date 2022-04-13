@@ -26,9 +26,9 @@ import WholeApp from '_navigations'
 const App =() => {
   LogBox.ignoreLogs(['Warning: ...']);
   return (
-    <SafeAreaView style={{ flex: 1, backgroundColor: 'white' }} >
+    // <SafeAreaView style={{ flex: 1, backgroundColor: 'white' }} >
     <WholeApp />
-    </SafeAreaView>
+    // </SafeAreaView>
   );
 };
 

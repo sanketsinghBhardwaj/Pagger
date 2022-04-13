@@ -6,14 +6,14 @@ import {
   DrawerItemList,
   DrawerItem,
 } from '@react-navigation/drawer';
-import Feather from 'react-native-vector-icons/Feather';
-import { Chats } from '_screens'
+import { useNavigation } from '@react-navigation/native'; 
+import { Chats,Settings } from '_screens'
 const { height, width } = Dimensions.get('window')
 import UserFlow from './UserFlow';
 import MyTabs from './TabviewHandler'
 
 import { ProfileList } from '_components';
-import { colors } from 'react-native-elements';
+
 
 import { Report } from '_assets';
 const Drawer = createDrawerNavigator();
@@ -37,22 +37,30 @@ function MyDrawer() {
   return (
     <Drawer.Navigator
       initialRouteName='UserFlow'
+      side='right'
       drawerContent={(props) => <CustomDrawerContent {...props} />}
-      screenOptions={{ headerShown: false, swipeEdgeWidth: 0, drawerStyle: { width: 320 } }}
+      screenOptions={{ headerShown: false, swipeEdgeWidth: 0, drawerStyle: { width: 320 , } }}
+      
     >
       <Drawer.Screen name='MyTabs' component={MyTabs} />
       <Drawer.Screen name='UserFlow' component={UserFlow} />
+      <Drawer.Screen name='Settings' component={Settings} />
     </Drawer.Navigator>
   )
 }
 function CustomDrawerContent(props) {
-
+const navigation = useNavigation();
+ 
+  const gotoScreens=()=>{
+    navigation.navigate("Settings");
+  }
 
   const renderlistitem = (item, index) => {
     return (
       <View>
         <ProfileList title={item.name}
           iconName={item.icon}
+          OnPress={()=> gotoScreens()}
         />
 
       </View>
